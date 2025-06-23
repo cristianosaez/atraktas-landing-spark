@@ -11,22 +11,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+
       - name: Instalar dependências
         run: npm install
+
       - name: Build do React
         run: npm run build
-      - name: Inserir ajuste final
+
+      - name: Inserir ajustes finais
         run: |
-          sed -i '/<\/head>/i <link rel="icon" href="/favicon.png">' build/index.html
-          sed -i '/<\/body>/i <a href="https://wa.me/5511972359617?text=Olá!%20Quero%20falar%20com%20um%20especialista%20da Atrakta." target="_blank" style="position:fixed;bottom:20px;right:20px;z-index:999;"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60"></a>' build/index.html
+          sed -i '/<\/head>/i <link rel="icon" href="/favicon.png">' dist/index.html
+          sed -i '/<\/body>/i <a href="https://wa.me/5511972359617?text=Olá!%20Quero%20falar%20com%20um%20especialista%20da Atrakta." target="_blank" style="position:fixed;bottom:20px;right:20px;z-index:999;"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60"></a>' dist/index.html
+
       - name: Compactar para ZIP
         run: |
-          cd build
+          cd dist
           zip -r ../atrakta-deploy.zip .
+
       - name: Publicar artefato ZIP
         uses: actions/upload-artifact@v4
         with:
