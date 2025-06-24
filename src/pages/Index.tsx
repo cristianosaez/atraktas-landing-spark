@@ -1,4 +1,5 @@
 
+
 import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import { Button } from "@/components/ui/button";
@@ -95,8 +96,12 @@ const Index = () => {
                 "Nunca anunciou e está ficando para trás?"
               ].map((problem, index) => (
                 <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
-                  <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✗</span>
+                  <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <img 
+                      src="/lovable-uploads/bb7f88ed-14f7-4e4e-8ec2-df683ff9a297.png" 
+                      alt="Atrakta Icon" 
+                      className="w-6 h-6"
+                    />
                   </div>
                   <p className="text-lg text-gray-700 font-medium">{problem}</p>
                 </div>
