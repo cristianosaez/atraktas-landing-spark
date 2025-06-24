@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Target, 
   TrendingUp, 
@@ -15,8 +14,6 @@ import {
   Instagram,
   Linkedin,
   Star,
-  Shield,
-  Zap,
   ArrowUp
 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
@@ -268,50 +265,6 @@ const Index = () => {
                 </form>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Chamada Final */}
-      <section className="py-20 bg-gradient-to-r from-orange-50 to-blue-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-atrakta-orange to-orange-600 rounded-full flex items-center justify-center">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-            </div>
-            
-            <h2 className="font-poppins text-3xl md:text-4xl font-bold mb-6 text-atrakta-navy">
-              Garantia de Transparência Total
-            </h2>
-            <p className="text-xl text-gray-700 mb-10 leading-relaxed">
-              Sem compromisso. Sem enrolação. Só resultados. Você não paga para conversar — 
-              e pode sair com um plano pronto para escalar sua empresa.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 mb-10">
-              <Badge className="bg-green-100 text-green-800 px-4 py-2 text-sm">
-                <CheckCircle className="w-4 h-4 mr-2" />
-                Consultoria Gratuita
-              </Badge>
-              <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm">
-                <Zap className="w-4 h-4 mr-2" />
-                Plano Personalizado
-              </Badge>
-              <Badge className="bg-purple-100 text-purple-800 px-4 py-2 text-sm">
-                <TrendingUp className="w-4 h-4 mr-2" />
-                Resultados Garantidos
-              </Badge>
-            </div>
-            
-            <Button 
-              onClick={handleWhatsAppClick}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Falar com Especialista no WhatsApp
-            </Button>
           </div>
         </div>
       </section>
