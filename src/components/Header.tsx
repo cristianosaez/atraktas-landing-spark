@@ -36,7 +36,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
           {/* Logo */}
           <div className="flex items-center">
             <img
-              src="/lovable-uploads/logo_atrakta.png"
+              src="/lovable-uploads/LOGOCLARO.png"
               alt="Atrakta"
               className="h-10 w-auto"
             />
