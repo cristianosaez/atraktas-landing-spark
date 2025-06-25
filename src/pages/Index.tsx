@@ -42,7 +42,7 @@ const Index = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Atrakta.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    window.open(`https://wa.me/5511972359617?text=${message}`, '_blank');
   };
 
   const scrollToContact = () => {
