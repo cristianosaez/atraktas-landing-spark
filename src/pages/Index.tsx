@@ -55,7 +55,29 @@ const Index = () => {
     <div className="min-h-screen bg-white font-inter">
       <Header onContactClick={scrollToContact} />
 
-      {/* ... seções anteriores permanecem inalteradas ... */}
+      {/* Hero Section */}
+      <section id="hero" className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-16">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h1 className="font-poppins text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Transforme Cliques em 
+              <span className="text-atrakta-orange"> Conversões</span> com o Poder do Google Ads
+            </h1>
+            <p className="text-xl md:text-2xl mb-10 text-gray-200 font-light leading-relaxed">
+              Estratégias sob medida para atrair, impactar e converter o público certo.
+            </p>
+            <Button 
+              onClick={handleWhatsAppClick}
+              className="bg-atrakta-orange hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+            >
+              Fale com um especialista
+            </Button>
+          </div>
+        </div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-atrakta-orange/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
+      </section>
 
       {/* Formulário de Contato */}
       <section id="contato" ref={contactRef} className="py-20 bg-atrakta-navy text-white">
@@ -67,7 +89,6 @@ const Index = () => {
             <p className="text-center text-gray-300 mb-12 text-lg">
               Impulsione sua empresa com estratégias que realmente convertem
             </p>
-
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
               <CardContent className="p-8">
                 <form onSubmit={handleFormSubmit} className="space-y-6">
@@ -141,7 +162,6 @@ const Index = () => {
               />
               <p className="text-gray-300 text-sm">Tráfego que Atrai</p>
             </div>
-
             <div className="flex items-center space-x-6">
               <a href="#" className="text-gray-300 hover:text-atrakta-orange transition-colors duration-300">
                 <Instagram className="w-6 h-6" />
@@ -151,7 +171,6 @@ const Index = () => {
               </a>
             </div>
           </div>
-
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
               <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
