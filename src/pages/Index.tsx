@@ -55,14 +55,12 @@ const Index = () => {
     <div className="min-h-screen bg-white font-inter">
       <Header onContactClick={scrollToContact} />
 
-      {/* Hero Section */}
       <section id="hero" className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-16">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="font-poppins text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Transforme Cliques em 
-              <span className="text-atrakta-orange"> Conversões</span> com o Poder do Google Ads
+              Transforme Cliques em <span className="text-atrakta-orange"> Conversões</span> com o Poder do Google Ads
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-gray-200 font-light leading-relaxed">
               Estratégias sob medida para atrair, impactar e converter o público certo.
@@ -75,8 +73,68 @@ const Index = () => {
             </Button>
           </div>
         </div>
-        <div className="absolute top-20 left-10 w-20 h-20 bg-atrakta-orange/20 rounded-full blur-xl"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
+      </section>
+
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center mb-16 text-atrakta-navy">
+              Reconhece alguma dessas situações?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {["Você anuncia, mas não vê resultado?", "Está atraindo cliques, mas não gera vendas?", "Investe sem saber o que funciona?", "Nunca anunciou e está ficando para trás?"].map((problem, index) => (
+                <div key={index} className="flex items-start space-x-4 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <div className="w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <img src="/lovable-uploads/bb7f88ed-14f7-4e4e-8ec2-df683ff9a297.png" alt="Atrakta Icon" className="w-6 h-6" />
+                  </div>
+                  <p className="text-lg text-gray-700 font-medium">{problem}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="solucao" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center mb-4 text-atrakta-navy">
+              A Solução ATRAKTA
+            </h2>
+            <p className="text-center text-gray-600 mb-16 text-lg">
+              Metodologia comprovada para transformar seu investimento em resultados reais
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[{
+                icon: Target,
+                title: "Estratégia Personalizada",
+                description: "Análise profunda do seu negócio para criar campanhas sob medida"
+              }, {
+                icon: BarChart3,
+                title: "Gestão Completa no Google Ads",
+                description: "Configuração, otimização e monitoramento 24/7 das suas campanhas"
+              }, {
+                icon: TrendingUp,
+                title: "Otimizações com Base em Dados",
+                description: "Decisões estratégicas baseadas em métricas e performance real"
+              }, {
+                icon: Users,
+                title: "Acompanhamento de Performance",
+                description: "Relatórios detalhados e reuniões regulares de resultados"
+              }].map((solution, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 animate-scale-in border-0 shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <CardContent className="p-6 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-atrakta-orange to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-poppins text-xl font-semibold mb-3 text-atrakta-navy">{solution.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{solution.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Formulário de Contato */}
@@ -96,7 +154,7 @@ const Index = () => {
                     <Input
                       placeholder="Seu nome completo"
                       value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange"
                       required
                     />
@@ -106,7 +164,7 @@ const Index = () => {
                       type="email"
                       placeholder="Seu melhor e-mail"
                       value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange"
                       required
                     />
@@ -115,7 +173,7 @@ const Index = () => {
                     <InputMask
                       mask="(99) 99999-9999"
                       value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     >
                       {(inputProps) => (
                         <Input
@@ -132,15 +190,12 @@ const Index = () => {
                     <Textarea
                       placeholder="Nos conte como podemos ajudar a destravar o crescimento da sua empresa"
                       value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange min-h-[120px]"
                       required
                     />
                   </div>
-                  <Button 
-                    type="submit"
-                    className="w-full bg-atrakta-orange hover:bg-orange-600 text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
+                  <Button type="submit" className="w-full bg-atrakta-orange hover:bg-orange-600 text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                     Quero turbinar minha empresa
                   </Button>
                 </form>
@@ -150,16 +205,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rodapé */}
       <footer className="bg-atrakta-navy text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
-              <img 
-                src="/lovable-uploads/LOGOCLARO.png" 
-                alt="Logo Atrakta" 
-                className="h-10 w-auto mb-2" 
-              />
+              <img src="/lovable-uploads/LOGOCLARO.png" alt="Logo Atrakta" className="h-10 w-auto mb-2" />
               <p className="text-gray-300 text-sm">Tráfego que Atrai</p>
             </div>
             <div className="flex items-center space-x-6">
@@ -181,22 +231,14 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Botão WhatsApp Flutuante */}
       <div className="fixed bottom-6 right-6 z-50">
-        <Button
-          onClick={handleWhatsAppClick}
-          className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse"
-        >
+        <Button onClick={handleWhatsAppClick} className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 animate-pulse">
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
 
-      {/* Scroll to top */}
       <div className="fixed bottom-6 left-6 z-50">
-        <Button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="bg-atrakta-navy hover:bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
-        >
+        <Button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-atrakta-navy hover:bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110">
           <ArrowUp className="w-5 h-5" />
         </Button>
       </div>
