@@ -35,9 +35,11 @@ const Header = ({ onContactClick }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="font-poppins text-2xl font-bold text-atrakta-navy">
-              ATRAKTA
-            </h1>
+            <img
+              src="/lovable-uploads/logo_atrakta.png"
+              alt="Atrakta"
+              className="h-10 w-auto"
+            />
             <span className="ml-2 text-sm text-gray-600 font-inter">
               Tráfego que Atrai
             </span>
