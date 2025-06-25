@@ -40,9 +40,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
               alt="Atrakta"
               className="h-20 w-auto"
             />
-            <span className="ml-2 text-sm text-gray-600 font-inter">
-              Tráfego que Atrai
-            </span>
+            
           </div>
 
           {/* Desktop Menu */}
