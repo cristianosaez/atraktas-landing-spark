@@ -38,7 +38,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
             <img
               src="/lovable-uploads/LOGOCLARO.png"
               alt="Atrakta"
-              className="h-10 w-auto"
+              className="h-20 w-auto"
             />
             <span className="ml-2 text-sm text-gray-600 font-inter">
               Tráfego que Atrai
