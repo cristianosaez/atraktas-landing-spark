@@ -38,7 +38,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
             <img
               src="/lovable-uploads/LOGOCLARO.png"
               alt="Atrakta"
-              className="h-20 w-auto"
+              className="h-30 w-auto"
             />
             
           </div>
