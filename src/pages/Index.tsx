@@ -174,7 +174,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
-              <img src="/lovable-uploads/LOGOSF.png" alt="Logo Atrakta" className="h-10" />
+              <img src="/lovable-uploads/LOGOSF.png" alt="Logo Atrakta" className="h-24" />
               <p className="text-gray-300 mt-2">Tráfego que Atrai</p>
             </div>
             <div className="flex items-center space-x-6">
