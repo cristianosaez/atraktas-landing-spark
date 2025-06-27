@@ -296,8 +296,8 @@ const Index = () => {
       <footer className="bg-atrakta-navy text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <h3 className="font-poppins text-2xl font-bold text-atrakta-orange mb-2">ATRAKTA</h3>
+            <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <img src="/LOGOSF.PNG" alt="Logo Atrakta" className="h-10 mb-2" />
               <p className="text-gray-300">Tráfego que Atrai</p>
             </div>
             <div className="flex items-center space-x-6">
@@ -314,10 +314,11 @@ const Index = () => {
               <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
               <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
             </div>
-            <p className="mt-4">&copy; 2024 Atrakta. Todos os direitos reservados.</p>
+            <p className="mt-4">&copy; {new Date().getFullYear()} Atrakta. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
+
     </div>
   );
 };
