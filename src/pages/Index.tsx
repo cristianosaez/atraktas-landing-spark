@@ -95,7 +95,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
   </button>
       
       {/* Hero Section - Ajustado espaçamento superior */}
-      <section className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-20">
+      <section id="hero" className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-24">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -148,7 +148,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
       </section>
 
       {/* Solução ATRAKTA */}
-      <section className="py-20 bg-white">
+      <section id="solucao" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center mb-4 text-atrakta-navy">
@@ -196,7 +196,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
       </section>
 
       {/* Depoimentos */}
-      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+      <section id="depoimentos" className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center mb-16 text-atrakta-navy">
