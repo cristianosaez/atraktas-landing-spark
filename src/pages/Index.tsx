@@ -104,7 +104,7 @@ const Index = () => {
               Reconhece alguma dessas situações?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto text-gray-700 text-lg">
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-3">
                 <Target className="text-atrakta-navy mt-1" size={32} />
                 <span>Você anuncia, mas não vê resultado?</span>
               </div>
