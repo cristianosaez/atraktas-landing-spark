@@ -19,6 +19,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+emailjs.init("24wa6cv2jWUoQEuWU"); // sua public key
 
 const Index = () => {
   const [formData, setFormData] = useState({
