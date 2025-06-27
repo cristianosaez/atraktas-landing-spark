@@ -19,7 +19,6 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-emailjs.init("24wa6cv2jWUoQEuWU"); // sua public key
 
 const Index = () => {
   const [formData, setFormData] = useState({
@@ -31,33 +30,45 @@ const Index = () => {
   const { toast } = useToast();
   const contactRef = useRef<HTMLElement>(null);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleFormSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    window.emailjs.send(
-      'service_n92bxgn',
-      'template_2cngbxm',
-      {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-      }
-    ).then(() => {
-      toast({
-        title: "Mensagem enviada com sucesso!",
-        description: "Obrigado pelo seu contato.",
-      });
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    }).catch((error) => {
-      toast({
-        title: "Erro ao enviar",
-        description: "Tente novamente mais tarde.",
-        variant: "destructive"
-      });
-      console.error('Erro no envio:', error);
+  // Inicializa a lib dentro da função
+  if (!window.emailjs?.init) {
+    toast({
+      title: "Erro de configuração",
+      description: "A biblioteca EmailJS não foi carregada.",
+      variant: "destructive"
     });
-  };
+    return;
+  }
+
+  window.emailjs.init("24wa6cv2jWUoQEuWU"); // Public Key
+
+  window.emailjs.send(
+    "service_n92bxgn",          // Service ID (Gmail)
+    "template_2cngbxm",         // Template ID
+    {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message
+    }
+  ).then(() => {
+    toast({
+      title: "Mensagem enviada com sucesso!",
+      description: "Obrigado pelo seu contato.",
+    });
+    setFormData({ name: '', email: '', phone: '', message: '' });
+  }).catch((error) => {
+    toast({
+      title: "Erro ao enviar",
+      description: "Tente novamente mais tarde.",
+      variant: "destructive"
+    });
+    console.error("Erro no envio:", error);
+  });
+};
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Oi! Estou buscando uma agência que realmente ajude a turbinar meu negócio. A Atrakta pode me ajudar?");
