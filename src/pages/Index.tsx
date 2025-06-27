@@ -78,6 +78,22 @@ const handleFormSubmit = (e: React.FormEvent) => {
     <div className="min-h-screen bg-white font-inter">
       <Header onContactClick={scrollToContact} />
 
+  {/* Botão flutuante do WhatsApp */}
+  <button
+    onClick={handleWhatsAppClick}
+    className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-transform transform hover:scale-105"
+    aria-label="Fale conosco pelo WhatsApp"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      fill="currentColor"
+      className="w-6 h-6"
+    >
+      <path d="M16 .1C7.2.1.1 7.2.1 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.2 4.8 1.9 7.7 1.9 8.8 0 15.9-7.2 15.9-15.9C31.9 7.2 24.8.1 16 .1zm0 29.3c-2.4 0-4.6-.6-6.6-1.7l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2-1.9-4.2-1.9-6.5C3.1 8.6 8.6 3.1 16 3.1s12.9 5.5 12.9 12.9-5.5 13-12.9 13zm7.2-9.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.8 1.2-1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1.1-1.9-2.5-2.1-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.5-.7.2-.3.1-.5 0-.7-.1-.2-.7-1.8-.9-2.5-.2-.7-.4-.6-.7-.6h-.6c-.2 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.1s1.4 3.6 1.6 3.8c.2.2 2.7 4.2 6.5 5.9.9.4 1.6.7 2.1.9.9.3 1.6.3 2.2.2.7-.1 2.3-.9 2.6-1.8.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.7-.5z" />
+    </svg>
+  </button>
+      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-16">
         <div className="absolute inset-0 bg-black/20"></div>
