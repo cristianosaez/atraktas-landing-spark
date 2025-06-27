@@ -78,21 +78,21 @@ const handleFormSubmit = (e: React.FormEvent) => {
     <div className="min-h-screen bg-white font-inter">
       <Header onContactClick={scrollToContact} />
 
-  {/* Botão flutuante do WhatsApp */}
-  <button
-    onClick={handleWhatsAppClick}
-    className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-transform transform hover:scale-105"
-    aria-label="Fale conosco pelo WhatsApp"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      fill="currentColor"
-      className="w-6 h-6"
-    >
-      <path d="M16 .1C7.2.1.1 7.2.1 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.2 4.8 1.9 7.7 1.9 8.8 0 15.9-7.2 15.9-15.9C31.9 7.2 24.8.1 16 .1zm0 29.3c-2.4 0-4.6-.6-6.6-1.7l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2-1.9-4.2-1.9-6.5C3.1 8.6 8.6 3.1 16 3.1s12.9 5.5 12.9 12.9-5.5 13-12.9 13zm7.2-9.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.8 1.2-1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1.1-1.9-2.5-2.1-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.5-.7.2-.3.1-.5 0-.7-.1-.2-.7-1.8-.9-2.5-.2-.7-.4-.6-.7-.6h-.6c-.2 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.1s1.4 3.6 1.6 3.8c.2.2 2.7 4.2 6.5 5.9.9.4 1.6.7 2.1.9.9.3 1.6.3 2.2.2.7-.1 2.3-.9 2.6-1.8.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.7-.5z" />
-    </svg>
-  </button>
+      {/* Botão flutuante do WhatsApp */}
+      <button
+        onClick={handleWhatsAppClick}
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-transform transform hover:scale-105"
+        aria-label="Fale conosco pelo WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          fill="currentColor"
+          className="w-6 h-6"
+        >
+          <path d="M16 .1C7.2.1.1 7.2.1 16c0 2.8.7 5.5 2.1 7.9L0 32l8.3-2.2c2.3 1.2 4.8 1.9 7.7 1.9 8.8 0 15.9-7.2 15.9-15.9C31.9 7.2 24.8.1 16 .1zm0 29.3c-2.4 0-4.6-.6-6.6-1.7l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2-1.9-4.2-1.9-6.5C3.1 8.6 8.6 3.1 16 3.1s12.9 5.5 12.9 12.9-5.5 13-12.9 13zm7.2-9.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.8 1.2-1 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1.1-1.9-2.5-2.1-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.5-.7.2-.3.1-.5 0-.7-.1-.2-.7-1.8-.9-2.5-.2-.7-.4-.6-.7-.6h-.6c-.2 0-.7.1-1.1.5-.4.4-1.4 1.3-1.4 3.1s1.4 3.6 1.6 3.8c.2.2 2.7 4.2 6.5 5.9.9.4 1.6.7 2.1.9.9.3 1.6.3 2.2.2.7-.1 2.3-.9 2.6-1.8.3-.8.3-1.5.2-1.6-.1-.2-.3-.3-.7-.5z" />
+        </svg>
+      </button>
       
       {/* Hero Section - Ajustado espaçamento superior */}
       <section id="hero" className="relative bg-gradient-to-br from-atrakta-navy via-atrakta-navy to-blue-900 text-white py-20 md:py-32 overflow-hidden mt-24">
@@ -245,24 +245,24 @@ const handleFormSubmit = (e: React.FormEvent) => {
       </section>
 
       {/* Formulário de Contato */}
-      <section id="contato" ref={contactRef} className="py-20 bg-atrakta-navy text-white">
+      <section id="contato" ref={contactRef} className="py-12 md:py-20 bg-atrakta-navy text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <h2 className="font-poppins text-4xl md:text-5xl font-bold text-center mb-4">
+            <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4">
               Vamos atrair resultados juntos?
             </h2>
-            <p className="text-center text-gray-300 mb-12 text-lg">
+            <p className="text-center text-gray-300 mb-8 md:mb-12 text-base md:text-lg px-4">
               Conte com nossa equipe para turbinar sua presença digital e alcançar novos resultados
             </p>
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8">
-                <form onSubmit={handleFormSubmit} className="space-y-6">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 mx-4 md:mx-0">
+              <CardContent className="p-4 md:p-8">
+                <form onSubmit={handleFormSubmit} className="space-y-4 md:space-y-6">
                   <div>
                     <Input
                       placeholder="Seu nome completo"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange"
+                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange h-12 text-base"
                       required
                     />
                   </div>
@@ -272,7 +272,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
                       placeholder="Seu melhor e-mail"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange"
+                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange h-12 text-base"
                       required
                     />
                   </div>
@@ -286,7 +286,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
                         <Input
                           {...inputProps}
                           placeholder="Seu telefone com WhatsApp"
-                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange"
+                          className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange h-12 text-base"
                           required
                         />
                       )}
@@ -297,13 +297,13 @@ const handleFormSubmit = (e: React.FormEvent) => {
                       placeholder="Como podemos turbinar sua empresa hoje?"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange min-h-[120px]"
+                      className="bg-white/10 border-white/30 text-white placeholder:text-gray-300 focus:border-atrakta-orange min-h-[100px] md:min-h-[120px] text-base resize-none"
                       required
                     />
                   </div>
                   <Button 
                     type="submit"
-                    className="w-full bg-atrakta-orange hover:bg-orange-600 text-white py-4 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-atrakta-orange hover:bg-orange-600 text-white py-3 md:py-4 text-base md:text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 h-12 md:h-auto"
                   >
                     Quero turbinar minha empresa
                   </Button>
