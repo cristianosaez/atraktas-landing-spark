@@ -37,7 +37,7 @@ const Index = () => {
 const handleFormSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
-  window.emailjs.send(
+  emailjs.send(
     'service_n92bxgn',
     'template_2cngbxm',
     {
