@@ -341,6 +341,19 @@ const handleFormSubmit = (e: React.FormEvent) => {
         </div>
       </footer>
 
+    {/* Botão Flutuante WhatsApp */}
+      <a 
+        href="https://wa.me/5511972359617?text=Oi!%20Estou%20buscando%20uma%20ag%C3%AAncia%20que%20realmente%20ajude%20a%20turbinar%20meu%20neg%C3%B3cio.%20A%20Atrakta%20pode%20me%20ajudar?" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-300"
+        title="Fale conosco pelo WhatsApp"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M20.52 3.48a12.02 12.02 0 0 0-17 0 11.96 11.96 0 0 0-2.36 3.39 11.98 11.98 0 0 0-.63 4.12c0 2.04.52 4.01 1.5 5.78L0 24l7.34-1.92a11.95 11.95 0 0 0 5.66 1.43h.01c6.63 0 12-5.37 12-12 0-3.2-1.26-6.21-3.49-8.48zm-8.49 17.01a9.97 9.97 0 0 1-5.09-1.39l-.36-.21-4.36 1.15 1.16-4.25-.23-.39a10.02 10.02 0 0 1 15.49-12.3 10.02 10.02 0 0 1-6.61 17.39zM17.24 14c-.29-.14-1.7-.83-1.96-.93-.26-.1-.45-.14-.64.15s-.73.93-.9 1.12c-.17.19-.33.21-.62.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.44.13-.59.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.64-1.54-.88-2.12-.23-.56-.47-.49-.64-.5h-.55c-.19 0-.5.07-.76.36s-1 1-1 2.43 1.02 2.82 1.16 3.01c.14.19 2.01 3.06 4.88 4.29.68.29 1.2.47 1.61.6.67.21 1.28.18 1.76.11.54-.08 1.7-.7 1.94-1.36.24-.66.24-1.23.17-1.36-.07-.13-.26-.21-.55-.36z" />
+        </svg>
+      </a>
+      
     </div>
   );
 };
