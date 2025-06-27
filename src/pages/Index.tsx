@@ -106,18 +106,12 @@ const Index = () => {
             <p className="text-gray-600 text-lg mb-12">
               Muitos negócios enfrentam dificuldades comuns ao anunciar online. Veja se você se identifica:
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                "Você anuncia, mas não vê resultado",
-                "Atrai cliques, mas não converte",
-                "Investe sem saber o que funciona",
-                "Ou nunca anunciou — e está ficando para trás"
-              ].map((text, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 text-gray-700 font-medium">
-                  {text}
-                </div>
-              ))}
-            </div>
+            <ul className="text-left max-w-xl mx-auto space-y-4 text-gray-700 text-lg">
+              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Você anuncia, mas não vê resultado</li>
+              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Atrai cliques, mas não converte</li>
+              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Investe sem saber o que funciona</li>
+              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Ou nunca anunciou — e está ficando para trás</li>
+            </ul>
           </div>
         </div>
       </section>
