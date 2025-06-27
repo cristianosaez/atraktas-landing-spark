@@ -108,15 +108,15 @@ const Index = () => {
                 <Target className="text-atrakta-navy mt-1" size={32} />
                 <span>Você anuncia, mas não vê resultado?</span>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-4">
                 <Target className="text-atrakta-navy mt-1" size={32} />
                 <span>Está atraindo cliques, mas não gera vendas?</span>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-4">
                 <Target className="text-atrakta-navy mt-1" size={32} />
                 <span>Investe sem saber o que funciona?</span>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-center gap-4">
                 <Target className="text-atrakta-navy mt-1" size={32} />
                 <span>Nunca anunciou e está ficando para trás?</span>
               </div>
