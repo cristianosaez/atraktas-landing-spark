@@ -1,7 +1,7 @@
 import InputMask from 'react-input-mask';
 import emailjs from 'emailjs-com';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from '@/components/Header';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,19 +30,12 @@ const Index = () => {
   const { toast } = useToast();
   const contactRef = useRef<HTMLElement>(null);
 
+  useEffect(() => {
+    emailjs.init("24wa6cv2jWUoQEuWU");
+  }, []);
+
 const handleFormSubmit = (e: React.FormEvent) => {
   e.preventDefault();
-
-
-  window.emailjs.init("24wa6cv2jWUoQEuWU"); // Substitua aqui pela sua Public Key
-  if (!window.emailjs?.init) {
-    toast({
-      title: "Erro",
-      description: "EmailJS não carregado corretamente.",
-      variant: "destructive"
-    });
-    return;
-  }
 
   window.emailjs.send(
     'service_n92bxgn',
