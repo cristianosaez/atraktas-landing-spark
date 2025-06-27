@@ -33,6 +33,8 @@ const Index = () => {
 const handleFormSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
+
+  window.emailjs.init("24wa6cv2jWUoQEuWU"); // Substitua aqui pela sua Public Key
   if (!window.emailjs?.init) {
     toast({
       title: "Erro",
@@ -41,8 +43,6 @@ const handleFormSubmit = (e: React.FormEvent) => {
     });
     return;
   }
-
-  window.emailjs.init("24wa6cv2jWUoQEuWU"); // Substitua aqui pela sua Public Key
 
   window.emailjs.send(
     'service_n92bxgn',
