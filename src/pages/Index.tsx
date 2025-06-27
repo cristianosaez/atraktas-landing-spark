@@ -297,8 +297,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0 flex flex-col items-center md:items-start">
-              <img src="/lovable-uploads/LOGOSF.png" alt="Logo Atrakta" className="h-10 mb-2" />
-              <p className="text-gray-300">Tráfego que Atrai</p>
+              <img src="/lovable-uploads/LOGOSF.png" alt="Logo Atrakta" className="h-16 mb-2" />
+              <p className="text-gray-300"></p>
             </div>
             <div className="flex items-center space-x-6">
               <a href="#" className="text-gray-300 hover:text-atrakta-orange transition-colors duration-300">
