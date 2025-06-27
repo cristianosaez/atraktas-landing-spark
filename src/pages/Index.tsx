@@ -103,15 +103,24 @@ const Index = () => {
             <h2 className="font-poppins text-4xl md:text-5xl font-bold text-atrakta-navy mb-6">
               Reconhece alguma dessas situações?
             </h2>
-            <p className="text-gray-600 text-lg mb-12">
-              Muitos negócios enfrentam dificuldades comuns ao anunciar online. Veja se você se identifica:
-            </p>
-            <ul className="text-left max-w-xl mx-auto space-y-4 text-gray-700 text-lg">
-              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Você anuncia, mas não vê resultado</li>
-              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Atrai cliques, mas não converte</li>
-              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Investe sem saber o que funciona</li>
-              <li className="flex items-start"><span className="text-atrakta-orange font-bold mr-2">•</span>Ou nunca anunciou — e está ficando para trás</li>
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto text-gray-700 text-lg">
+              <div className="flex items-start gap-2">
+                <Target className="text-atrakta-navy mt-1" size={20} />
+                <span>Você anuncia, mas não vê resultado?</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Target className="text-atrakta-navy mt-1" size={20} />
+                <span>Está atraindo cliques, mas não gera vendas?</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Target className="text-atrakta-navy mt-1" size={20} />
+                <span>Investe sem saber o que funciona?</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Target className="text-atrakta-navy mt-1" size={20} />
+                <span>Nunca anunciou e está ficando para trás?</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
