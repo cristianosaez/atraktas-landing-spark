@@ -31,12 +31,27 @@ const Header = ({ onContactClick }: HeaderProps) => {
     setIsMenuOpen(false);
   };
 
+  const handleContactClick = () => {
+    const element = document.querySelector('#contato');
+    if (element) {
+      const headerHeight = 96; // h-24 = 96px
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
-          {/* Logo - Ajustado para não ser cortado */}
-          <div className="flex items-center">
+          {/* Logo */}
+          <div className="flex items-center py-2">
             <img
               src="/lovable-uploads/LOGOCLARO.png"
               alt="Atrakta"
@@ -56,7 +71,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
               </button>
             ))}
             <Button 
-              onClick={onContactClick}
+              onClick={handleContactClick}
               className="bg-atrakta-orange hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300"
             >
               Falar Conosco
@@ -87,7 +102,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
               ))}
               <div className="px-4 py-3">
                 <Button 
-                  onClick={onContactClick}
+                  onClick={handleContactClick}
                   className="w-full bg-atrakta-orange hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300"
                 >
                   Falar Conosco
