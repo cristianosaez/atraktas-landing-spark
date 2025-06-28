@@ -346,7 +346,7 @@ const handleFormSubmit = (e: React.FormEvent) => {
         href="https://wa.me/5511972359617?text=Oi!%20Estou%20buscando%20uma%20ag%C3%AAncia%20que%20realmente%20ajude%20a%20turbinar%20meu%20neg%C3%B3cio.%20A%20Atrakta%20pode%20me%20ajudar?" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg animate-pulse hover:animate-none transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg animate-bounce hover:animate-none transition-all duration-300"
         title="Fale conosco pelo WhatsApp"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
